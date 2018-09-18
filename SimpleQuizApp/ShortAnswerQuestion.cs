@@ -36,7 +36,8 @@ namespace SimpleQuizApplication
          */
         public override bool checkAnswer(String givenAnswer)
         {
-            return (answer.Equals(givenAnswer, StringComparison.InvariantCultureIgnoreCase));
+            String ansNoWhiteSpace = RemoveWhitespace(answer);
+            return (ansNoWhiteSpace.Equals(RemoveWhitespace(givenAnswer), StringComparison.InvariantCultureIgnoreCase));
         }
 
         /// <summary>
